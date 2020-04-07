@@ -1,0 +1,21 @@
+{% extends "template.html" %}
+
+{% block content %}
+    <div class="main-body">
+        <div class="repositories-container">
+            <h1>List of github repositories of {{ author }}.</h1>
+            <ul>
+                {% for repo in repos %}
+                    <li>
+                        <a href="{{ url_for('repository', index = repo.name)}}">
+                            <h2>{{repo.name}}</h2>
+                            <h3>{{repo.owner.login}}</h3>
+                            <p class="description"><b>Description:</b> {{repo.description}}</p>
+                            <p class="created_at">Created at: {{ repo.created_at }}</p>
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+{% endblock %}

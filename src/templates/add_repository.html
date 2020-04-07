@@ -1,0 +1,20 @@
+{% extends "template.html" %}
+
+{% block content %}
+    <div class="main-body">
+        <div class="repositories-container">
+            <h1>Add repository.</h1>
+            <form method="post">
+                <p>
+                    Title:
+                    <input type="text" name="title">
+                </p>
+                <p>
+                    Author:
+                    <input type="text" name="author">
+                </p>
+                <button type="submit">Create</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

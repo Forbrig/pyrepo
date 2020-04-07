@@ -1,0 +1,30 @@
+{% extends "template.html" %}
+
+{% block content %}
+    <div class="main-body">
+        <div class="repository-container">
+            {% if index > 0 %}
+                <form method="get" action="{{ url_for('repository', index = index - 1) }}">
+                    <button>
+                        Previous
+                    </button>
+                </form>
+            {% endif %}
+            <div class="content">
+                <h1>{{repo.name}}.</h1>
+                <h2>Author: {{repo.owner.login}}</h2>
+                <p><b>Description:</b> {{repo.description}}</p>
+                <a target="_blank" href="{{repo.html_url}}">Link for the repository</a>
+                <p><b>Created at: </b>{{repo.created_at}}</p>
+                <p><b>Last update: </b>{{repo.updated_at}}</p>
+            </div>
+            {% if index < max_index %}
+                <form method="get" action="{{ url_for('repository', index = index + 1) }}">
+                    <button>
+                        Next
+                    </button>
+                </form>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
