@@ -2,10 +2,12 @@
 
 Python repository previwer (to learn python + flask)
 
-![pyrepo_1](https://raw.githubusercontent.com/Forbrig/survetric/master/pyrepo_1.png)
-![pyrepo_2](https://raw.githubusercontent.com/Forbrig/survetric/master/pyrepo_2.png)
-![pyrepo_3](https://raw.githubusercontent.com/Forbrig/survetric/master/pyrepo_3.png)
-![pyrepo_4](https://raw.githubusercontent.com/Forbrig/survetric/master/pyrepo_4.png)
+<p align="middle">
+  <img src="https://raw.githubusercontent.com/Forbrig/pyrepo/master/pyrepo_1.png" width="400" />
+  <img src="https://raw.githubusercontent.com/Forbrig/pyrepo/master/pyrepo_2.png" width="400" /> 
+  <img src="https://raw.githubusercontent.com/Forbrig/pyrepo/master/pyrepo_3.png" width="400" />
+  <img src="https://raw.githubusercontent.com/Forbrig/pyrepo/master/pyrepo_4.png" width="400" />
+</p>
 
 ## Getting Started
 
