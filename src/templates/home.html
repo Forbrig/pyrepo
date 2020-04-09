@@ -2,9 +2,43 @@
 
 {% block content %}
     <div class="main-body">
-        <div class="content">
-            <h1>Welcome to Flask test.</h1>
-            <p>This is a simple website made for learning how to use Python with Flask.</p>
+        <div class="center-user-container">
+            <div class="user-container">
+                {% if user == none %}
+                    <div class="input-username">
+                        {% if message != "" %}
+                            {{message}}
+                        {% endif %}
+                        <h2>Insert a github username</h2>
+                        <form method="post">
+                            <input type="text" name="username">
+                            <button class="button" type="submit">Add user</button>
+                        </form>
+                    </div>
+                {% else %}
+                    <a class="remove_user" href="{{ url_for('remove_user') }}">&times;</a>
+                    <a href="{{user.html_url}}" target="_blank">
+                        <img alt="User Avatar" src="{{user.avatar_url}}">
+                    </a>
+                    <div class="user-info">
+                        <h1>{{user.name}}</h1>
+                        <h2>{{user.login}}</h2>
+                        {% if user.bio %}
+                            <h3>{{user.bio}}</h3>
+                        {% endif %}
+
+                        <div class="info-table">
+                            <p><b>Company:</b> {{user.company}}</p>
+                            <p><b>Location:</b> {{user.location}}</p>
+                            <p><b>Followers:</b> {{user.followers}}</p>
+                            <p><b>Following:</b> {{user.following}}</p>
+                            <p><b>Public repositories:</b> {{user.public_repos}}</p>
+                            <p><b>Website:</b> <a href="https://{{user.blog}}" target="_blank">{{user.blog}}</a></p>
+                        </div>
+                        <p class="joined_at">Joined at: {{user.created_at}}</p>
+                    </div>
+                {% endif %}
+            </div>
         </div>
     </div>
 {% endblock %}

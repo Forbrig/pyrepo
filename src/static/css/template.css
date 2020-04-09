@@ -18,6 +18,7 @@ button {
 }
 
 .navbar {
+    position: absolute;
     display: flex;
     padding: 0 60px;
     width: 100%;
@@ -39,29 +40,155 @@ button {
     color: white;
 }
 
+/* navbar height: 100px; position: absolute */
 .main-body {
+    padding-top: 100px;
     width: 100%;
     max-width: 1120px;
     height: 100vh;
     margin: 0 auto;
 }
 
-.main-body .content {
-    margin-top: 20px;
+.center-user-container {
+    height: 100vh;
+
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 
-.main-body .content h1 {
+.user-container {
+    width: 100%;
+    display: flex;
+    margin-top: -100px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding: 24px;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+.user-container .input-username {
+    display: block;
+}
+
+.user-container h2 {
+    width: 100%;
+    display: block;
+}
+
+.user-container form {
+    margin-top: 16px;
+    display: flex;
+    width: 100%;
+    max-width: 450px;
+}
+
+.user-container form input {
+    width: 350px;
+    height: 60px;
+    color: #333;
+    border: 1px solid #dcdce6;
+    border-radius: 8px;
+    padding: 0 24px;
+}
+
+.user-container form button {
+    width: 100px;
+    height: 60px;
+    background: #487eb0;
+    font-weight: 700;
+    border: 0;
+    border-radius: 8px;
+    color: #FFF;
+    text-decoration: none;
+    font-size: 18px;
+    transition: filter 0.2s;
+}
+
+.user-container button:hover {
+    filter: brightness(90%);
+}
+
+.user-container form input + button {
+    margin-left: 8px;
+}
+
+.user-container a {
+    width: 30%;
+}
+
+.user-container .remove_user {
+    color: #ccc;
+    font-size: 18px;
+    text-decoration: none;
+    position: absolute;
+    width: auto;
+    right: 5px;
+    top: 0;
+}
+
+.user-container a img {
+    border-radius: 8px;
+    width: 100%;
+}
+
+.user-container .user-info {
+    position: relative;
+    padding: 0 20px;
+    width: 70%;
+}
+
+.user-container .user-info h1,
+.user-container .user-info h2,
+.user-container .user-info h3 {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.user-container .user-info h2 {
+    color: grey;
+    font-style: italic;
+}
+
+.user-container .user-info .info-table {
+    padding: 0 100px;
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 24px;
+    list-style: none;
+}
+
+.user-container .user-info .joined_at {
+    position: absolute;
+    padding-right: 10px;
+    text-align: right;
+    bottom: 0px;
+}
+
+.user-container h1 {
     display: block;
     width: 100%;
 }
 
-.main-body .content p {
+.user-container p {
     margin-top: 16px;
     width: 100%;
 }
 
 .repositories-container {
-    margin-top: 20px;
+    padding-top: 15px;
+}
+
+.repositories-container h1 {
+    padding: 0 6px;
+}
+
+.repositories-container h1 p {
+    float: right;
+    margin-right: 6px;
 }
 
 .repositories-container a {
@@ -70,7 +197,7 @@ button {
 }
 
 .repositories-container ul {
-    margin-top: 20px;
+    margin: 20px 0;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 24px;
@@ -142,4 +269,14 @@ button {
     transition: 0.3s;
     padding: 24px;
     border-radius: 8px;
+}
+
+.repository-container .content h1,
+.repository-container .content h2 {
+    text-align: center;
+}
+
+.repository-container .content a {
+    display: block;
+    margin-top: 16px;
 }
